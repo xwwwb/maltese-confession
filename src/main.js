@@ -54,13 +54,14 @@ let times = 0;
 document
   .querySelector("#buttons > div:nth-child(2)")
   .addEventListener("click", () => {
+    let button = document.querySelector("#buttons > div:nth-child(2)");
     if (times == 0) {
-      let button = document.querySelector("#buttons > div:nth-child(2)");
       button.classList.add("duration");
     }
     index++;
     if (index == status.length - 1) {
       index = status.length - 2;
+      button.style.display = "none";
     }
     ChangeStatus(index);
   });
@@ -77,11 +78,9 @@ document
     document.querySelector("#buttons").style.display = "none";
   });
 
-  // 图片预加载
-  let img = [];
-  for (let i = 0; i < status.length; i++) {
-    img[i] = new Image();
-    img[i].src = status[i].img;
-  }
-
-  
+// 图片预加载
+let img = [];
+for (let i = 0; i < status.length; i++) {
+  img[i] = new Image();
+  img[i].src = status[i].img;
+}
