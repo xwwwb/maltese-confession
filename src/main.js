@@ -76,3 +76,12 @@ document
       "！！！我可是超级爱你的呦！！！";
     document.querySelector("#buttons").style.display = "none";
   });
+
+  // 图片预加载
+  let img = [];
+  for (let i = 0; i < status.length; i++) {
+    img[i] = new Image();
+    img[i].src = status[i].img;
+  }
+
+  
