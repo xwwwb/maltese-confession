@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(240, 211, 216);
+  height: 100vh;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#title {
+  color: rgb(85, 52, 64);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+}
+
+#buttons > div {
+  font-size: 14px;
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  color: white;
+  cursor: pointer;
+  padding: 1em 2em;
+}
+
+#buttons > div:nth-child(1) {
+  background-color: rgb(181, 114, 118);
+}
+
+#buttons > div:nth-child(2) {
+  background-color: rgb(84, 109, 148);
+}
+
+.duration {
+  transition: all 0.5s;
+}
