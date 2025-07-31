@@ -43,8 +43,9 @@ function ChangeStatus(index) {
   document.querySelector("#buttons > div:nth-child(2)").innerText =
     status[index].button;
   let button = document.querySelector("#buttons > div:nth-child(2)");
-  // 改字体
-  button.style.fontSize = 14 * status[index].scale + "px";
+  // Use CSS custom property instead of inline style
+  button.style.setProperty('--font-size', (14 * status[index].scale) + 'px');
+  button.classList.add('dynamic-font');
 }
 
 ChangeStatus(index);
@@ -61,7 +62,8 @@ document
     index++;
     if (index == status.length - 1) {
       index = status.length - 2;
-      button.style.display = "none";
+      // Use CSS class instead of inline style
+      button.classList.add("hidden");
     }
     ChangeStatus(index);
   });
@@ -75,7 +77,8 @@ document
 
     document.querySelector("#title").innerText =
       "！！！我可是超级爱你的呦！！！";
-    document.querySelector("#buttons").style.display = "none";
+    // Use CSS class instead of inline style
+    document.querySelector("#buttons").classList.add("hidden");
   });
 
 // 图片预加载

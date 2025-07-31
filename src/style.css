@@ -50,3 +50,13 @@ body {
 .duration {
   transition: all 0.5s;
 }
+
+/* Utility classes for styled component approach */
+.hidden {
+  display: none !important;
+}
+
+/* Dynamic scaling using CSS custom properties */
+.dynamic-font {
+  font-size: var(--font-size, 14px);
+}
